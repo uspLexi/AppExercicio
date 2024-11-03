@@ -1,0 +1,71 @@
+﻿@model AppExercicio.Models.Usuario
+
+@{
+    ViewBag.Title = "Usuario";
+}
+
+<h2>Cadastro de Usuario</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+<fieldset>
+
+    <h5><b>Codigo : </b></h5>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Cod)
+        @Html.ValidationMessageFor(m => m.Cod)
+    </div>
+
+    <h5><b>Nome de usuario : </b></h5>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Nome)
+        @Html.ValidationMessageFor(m => m.Nome)
+    </div>
+
+    <h5><b>Observação : </b></h5>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Obs)
+        @Html.ValidationMessageFor(m => m.Obs)
+    </div>
+
+    <h5><b>Data de nascimento : </b></h5>
+    <div class="editor-field" type="@DateTime.Now">
+        @Html.EditorFor(m => m.Nasc)
+        @Html.ValidationMessageFor(m => m.Nasc)
+    </div>
+
+    <h5><b>Email : </b></h5>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Email)
+        @Html.ValidationMessageFor(m => m.Email)
+    </div>
+
+    <h5><b>Login : </b></h5>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Login)
+        @Html.ValidationMessageFor(m => m.Login)
+    </div>
+
+    <h5><b>Senha : </b></h5>
+    <div class="editor-field">
+        @Html.PasswordFor(m => m.Senha)
+        @Html.ValidationMessageFor(m => m.Senha)
+    </div>
+
+    <h5><b>Confirmar senha : </b></h5>
+    <div class="editor-field">
+        @Html.PasswordFor(m => m.ComfirmSenha)
+        @Html.ValidationMessageFor(m => m.ComfirmSenha)
+    </div>
+
+    <br />
+    <p><input type="submit" value="Cadastrar" /></p>
+    @Html.ActionLink("Cancelar", "Index", "Home")
+
+</fieldset>
+
+    @section Scripts{@Scripts.Render("~/bundles/jqueryal")}
+}
+

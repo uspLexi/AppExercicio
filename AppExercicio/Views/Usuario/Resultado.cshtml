@@ -1,0 +1,30 @@
+﻿@model AppExercicio.Models.Usuario
+
+@{
+    ViewBag.Title = "Resultado";
+}
+
+<h2>Listar Usuario</h2>
+
+<fieldset>
+
+    <h5><b>Nome de usuario : </b></h5>
+    <div class="editor-field">@Html.DisplayFor(m => m.Nome) </div>
+
+    <h5><b>Observação : </b></h5>
+    <div class="editor-field">@Html.DisplayFor(m => m.Obs) </div>
+
+    <h5><b>Data de nascimento : </b></h5>
+    <div class="editor-field"> @Html.DisplayFor(m => m.Nasc)</div>
+
+    <h5><b>Email : </b></h5>
+    <div class="editor-field">@Html.DisplayFor(m => m.Email) </div>
+
+    <h5><b>Login : </b></h5>
+    <div class="editor-field">@Html.DisplayFor(m => m.Login) </div>
+    <br />
+    <p> @Html.ActionLink("Voltar", "Index", "Home")</p>
+
+</fieldset>
+
+

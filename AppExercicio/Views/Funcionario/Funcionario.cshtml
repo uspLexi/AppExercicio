@@ -1,0 +1,41 @@
+﻿@model AppExercicio.Models.Funcionario
+
+@{
+    ViewBag.Title = "Funcionario";
+}
+
+<h2>Cadastro de Funcionario</h2>
+
+@using (Html.BeginForm())
+{
+   @Html.ValidationSummary(true)
+
+<fieldset>
+
+    <h5><b>Codigo : </b></h5>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Cod)
+        @Html.ValidationMessageFor(m => m.Cod)
+    </div>
+
+    <h5><b>Nome : </b></h5>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Nome)
+        @Html.ValidationMessageFor(m => m.Nome)
+    </div>
+
+    <h5><b>Cargo : </b></h5>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Cargo)
+        @Html.ValidationMessageFor(m => m.Cargo)
+    </div>
+    <br />
+    <p><input type="submit" value="Cadastrar" /></p>
+    @Html.ActionLink("Cancelar", "Index", "Home")
+
+</fieldset>
+ }
+
+
+
+

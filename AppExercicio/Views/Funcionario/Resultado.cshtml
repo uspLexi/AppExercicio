@@ -1,0 +1,24 @@
+﻿@model AppExercicio.Models.Funcionario
+
+@{
+    ViewBag.Title = "Resultado";
+}
+
+<h2>Usuario Cadstrado</h2>
+
+<fieldset>
+
+    <h5><b>Codigo : </b></h5>
+    <div class="editor-field">@Html.DisplayFor(m => m.Cod) </div>
+
+    <h5><b>Nome : </b></h5>
+    <div class="editor-field">@Html.DisplayFor(m => m.Nome) </div>
+
+    <h5><b>Cargo : </b></h5>
+    <div class="editor-field">@Html.DisplayFor(m => m.Cargo) </div>
+    <br />
+    <p> @Html.ActionLink("Voltar", "Index", "Home")</p>
+
+</fieldset>
+
+
